@@ -28,5 +28,25 @@ public class HelloController {
         return "hello" + name;
     }
 
+    @GetMapping("hello-api")
+    @ResponseBody
+    public Hello helloAPI(@RequestParam("name") String name) {
+        Hello hello = new Hello();
+        hello.setName(name);
+        return hello;
+    }
+
+    static class Hello {
+        private String name;
+
+        //자바 빈 규약, 프로퍼티 접근 방식
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+    }
 
 }
