@@ -1,9 +1,13 @@
 package hello.hellospring.repository;
 
 import hello.hellospring.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
+//controller-service-repository
+
+//@Repository
 public class MemoryMemberRepository implements MemberRepository{
 
     //id = long , 값 = Member
