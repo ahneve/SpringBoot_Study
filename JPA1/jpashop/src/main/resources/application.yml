@@ -1,22 +1,22 @@
-spring:
-  datasource:
-    url: jdbc:h2:tcp://localhost/~/jpashop;MVCC=TRUE
+#이런 설정들은 springboot 오피셜 페이지 메뉴얼 보고 하나하나 공부해야함
+#엄청 많음,,
+
+spring: #띄어쓰기 없음
+  datasource: #띄어쓰기 2칸
+    url: jdbc:h2:tcp://localhost/~/jpashop #4칸
     username: sa
     password:
     driver-class-name: org.h2.Driver
 
-  jpa:
-    hibernate:
-      ddl-auto: create
-    properties:
-      hibernate:
-        show:sql: true
-        format_sql: true
+  jpa: #띄어쓰기 2칸
+    hibernate: #띄어쓰기 4칸
+      ddl-auto: create #띄어쓰기 6칸
+    properties: #띄어쓰기 4칸
+      hibernate: #띄어쓰기 6칸
+        show_sql: true #띄어쓰기 8칸
+        format_sql: true #띄어쓰기 8칸
 
-        #이런 설정들은 springboot 오피셜 페이지 메뉴얼 보고 하나하나 공부해야함
-        #엄청 많음,,
-
-  logging:
-    level:
-      org.hibernate.SQL: debug
-      #hibernate이 생성하는 sql들을 디버그 모드로 로그로 찍음
+#hibernate이 생성하는 sql들을 디버그 모드로 로그로 찍음
+logging.level: #띄어쓰기 없음
+  org.hibernate.SQL: debug #띄어쓰기 2칸
+  org.hibernate.type: trace #띄어쓰기 2칸

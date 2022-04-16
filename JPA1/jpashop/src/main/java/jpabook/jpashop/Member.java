@@ -1,3 +1,4 @@
+//회원 엔티티
 package jpabook.jpashop;
 
 import lombok.Getter;
